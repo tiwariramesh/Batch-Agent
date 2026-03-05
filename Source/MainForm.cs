@@ -2,8 +2,8 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-[assembly: System.Reflection.AssemblyTitle("Advanced Batch Converter")]
-[assembly: System.Reflection.AssemblyProduct("Advanced Batch Converter")]
+[assembly: System.Reflection.AssemblyTitle("Batch File Agent")]
+[assembly: System.Reflection.AssemblyProduct("Batch File Agent")]
 [assembly: System.Reflection.AssemblyVersion("3.0.0.0")]
 [assembly: System.Runtime.InteropServices.ComVisible(false)]
 
@@ -35,7 +35,7 @@ namespace DocumentConverter
 
         private void InitializeComponent()
         {
-            this.Text = "Advanced File Manager & Converter";
+            this.Text = "Batch File Agent - Professional File Manager & Converter";
             this.Size = new Size(1100, 650);
             this.MinimumSize = new Size(800, 500);
             this.BackColor = darkBg;
@@ -96,7 +96,7 @@ namespace DocumentConverter
             tabAbout.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabAbout.Click += delegate(object sender, EventArgs e) 
             { 
-                MessageBox.Show("Advanced File Manager & Converter\nVersion: 3.0.0.0\nAuthor: Ramesh Tiwari\n\nPurpose: This application was created to make file conversion and management accessible for general-purpose use to all. While thousands of applications online and in stores charge payments for batch processing, these native Windows operations should not be payable. They should instead be convenient and genuinely free to all users.", "About Application", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Batch File Agent\nVersion: 3.0.0.0\nAuthor: Ramesh Tiwari\n\nPurpose: This application was created to make file conversion and management accessible for general-purpose use to all. While thousands of applications online and in stores charge payments for batch processing, these native Windows operations should not be payable. They should instead be convenient and genuinely free to all users.", "About Batch File Agent", MessageBoxButtons.OK, MessageBoxIcon.Information);
             };
             sidebar.Controls.Add(tabAbout);
 

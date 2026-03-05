@@ -1,10 +1,10 @@
-# 🚀 Batch Agent - Advanced File Manager & Converter
+# 🚀 Batch File Agent - Advanced File Manager & Converter
 
-![Batch Agent Banner](https://img.shields.io/badge/Status-Open%20Source-brightgreen?style=for-the-badge)
+![Batch File Agent Banner](https://img.shields.io/badge/Status-Open%20Source-brightgreen?style=for-the-badge)
 ![Version](https://img.shields.io/badge/Version-3.0.0.0-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
 
-**Batch Agent** is a powerful, professional-grade Windows utility designed to handle high-volume file conversions and management tasks with simplicity and speed. Built with a focus on productivity, it eliminates the need for expensive, subscription-based batch processing software.
+**Batch File Agent** is a powerful, professional-grade Windows utility designed to handle high-volume file conversions and management tasks with simplicity and speed. Built with a focus on productivity, it eliminates the need for expensive, subscription-based batch processing software.
 
 ---
 
@@ -22,14 +22,14 @@
 ---
 
 ## 🌟 About the Application
-Batch Agent (formerly CS_Compiled) is a native C# Windows application that provides a sleek, dark-themed interface for processing large volumes of documents. Whether you need to convert hundreds of Word files to PDF or manage complex directory structures, Batch Agent handles the "heavy lifting" so you don't have to.
+Batch File Agent is a native C# Windows application that provides a sleek, dark-themed interface for processing large volumes of documents. Whether you need to convert hundreds of Word files to PDF or manage complex directory structures, Batch File Agent handles the "heavy lifting" so you don't have to.
 
 ## 💡 Our Philosophy
 In today's digital landscape, many basic Windows operations—like batch converting Word documents to PDF—are locked behind paywalls or subscription models in the Microsoft Store and online tools. 
 
 **We believe these native operations should be genuinely free to all users.** 
 
-Batch Agent is an open-source initiative to provide these essential daily tools without the price tag, ensuring every user has access to professional-level automation.
+Batch File Agent is an open-source initiative to provide these essential daily tools without the price tag, ensuring every user has access to professional-level automation.
 
 ## ✨ Key Features
 - **High-Speed Conversion**: 
@@ -63,7 +63,7 @@ Batch Agent is an open-source initiative to provide these essential daily tools 
 - **Framework**: .NET Framework 4.7.2 or higher.
 
 ## 🔜 Coming Soon (Roadmap)
-We are constantly expanding the capabilities of Batch Agent. Upcoming features include:
+We are constantly expanding the capabilities of Batch File Agent. Upcoming features include:
 - [ ] Image conversion (JPG, PNG, WebP)
 - [ ] OCR (Optical Character Recognition) for scanned PDFs
 - [ ] Advanced file renaming and sorting tools
