@@ -22,6 +22,8 @@ namespace DocumentConverter
         private Panel fileConversionView;
         private Panel fileManagementView;
         private AnimatedFlatButton menuToggle;
+        private PictureBox logoBox;
+        private Label titleLabel;
         
         private System.Windows.Forms.Timer _sidebarTimer;
         private bool _isSidebarExpanded;
@@ -42,6 +44,16 @@ namespace DocumentConverter
             this.ForeColor = textColor;
             this.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            try
+            {
+                string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "app_icon.ico");
+                if (System.IO.File.Exists(iconPath))
+                {
+                    this.Icon = new Icon(iconPath);
+                }
+            }
+            catch { /* Fallback to default if icon fails to load */ }
 
             // --- Sidebar Components ---
             sidebar = new Panel();
@@ -64,11 +76,38 @@ namespace DocumentConverter
             menuToggle.Click += new EventHandler(MenuToggle_Click);
             sidebar.Controls.Add(menuToggle);
 
+            logoBox = new PictureBox();
+            logoBox.Size = new Size(32, 32);
+            logoBox.Location = new Point(14, 65);
+            logoBox.SizeMode = PictureBoxSizeMode.Zoom;
+            logoBox.BackColor = Color.Transparent;
+            try
+            {
+                string iconPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "app_icon.ico");
+                if (System.IO.File.Exists(iconPath))
+                {
+                    logoBox.Image = new Icon(iconPath, 32, 32).ToBitmap();
+                }
+            }
+            catch { }
+            sidebar.Controls.Add(logoBox);
+
+            titleLabel = new Label();
+            titleLabel.Text = "Batch File Agent";
+            titleLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            titleLabel.ForeColor = textColor;
+            titleLabel.Location = new Point(55, 70);
+            titleLabel.Width = 150;
+            titleLabel.AutoSize = false;
+            sidebar.Controls.Add(titleLabel);
+
+            // Shift tabs down to accommodate the logo
+            int tabStartY = 120;
             TabButton tabConvert = new TabButton();
             tabConvert.Text = "File Conversion";
             tabConvert.IconText = "🔄";
             tabConvert.Size = new Size(220, 50);
-            tabConvert.Location = new Point(0, 60);
+            tabConvert.Location = new Point(0, tabStartY);
             tabConvert.BackColor = sidebarBg;
             tabConvert.ForeColor = textColor;
             tabConvert.IsSelected = true;
@@ -78,7 +117,7 @@ namespace DocumentConverter
             tabManage.Text = "File Management";
             tabManage.IconText = "🗂";
             tabManage.Size = new Size(220, 50);
-            tabManage.Location = new Point(0, 110);
+            tabManage.Location = new Point(0, tabStartY + 50);
             tabManage.BackColor = sidebarBg;
             tabManage.ForeColor = Color.Gray; 
             sidebar.Controls.Add(tabManage);
@@ -179,6 +218,7 @@ namespace DocumentConverter
             {
                 if(c is TabButton) ((TabButton)c).ShowText = show;
             }
+            titleLabel.Visible = show;
         }
 
         private void ShowView(Panel view)
